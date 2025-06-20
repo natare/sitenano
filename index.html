@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
 		<title>Nanoessência</title>
+		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 	</head>
 
 	<style type="text/css">
 		* {box-sizing: border-box;}
 		body {font-family: "Open Sans", sans-serif;}
-	
-		h1 {font-family: sans-serif; font-weight: bold;font-size:5vw; font-family: "Open Sans", sans-serif;}
-		h2 {font-family: sans-serif; font-size:3vw; font-weight: medium;display:block; font-family: "Open Sans", sans-serif;}
-		h3 {font-family: sans-serif; font-size:1.6vw; font-weight: medium;display:block; font-family: "Open Sans", sans-serif;}
-		.azul {color:#5050ea;}
-		.cinza {color:#3a3a3a;}
+		p {font-size: 1.2vw; color: #3a3a3a;}	
+		h1 {font-family: sans-serif; font-size: 5.5vw; font-weight: 800; font-family: "Funnel Display", sans-serif;}
+		h2 {font-family: sans-serif; font-size: 3vw; font-weight: medium; font-family: "Open Sans", sans-serif;}
+		h3 {font-family: sans-serif; font-size: 1.6vw; font-weight: medium; font-family: "Open Sans", sans-serif;}
+		
+		.azul {color: #5050ea;}
+		.cinza {color: #3a3a3a;}
 		
 		#sobre {position: relative; text-align: center; color: #f2f2f2;}
-		#sobre p{font-size:2vw; color:#f2f2f2;}
-				
-		.itens {width:28%; background:#;float:none;padding:2%;display:inline-block;}
-		.itensb {background:#;float:none;padding:10%;display:inline-block;align-self: start;}
+		#sobre p {font-size:2vw; color:#f2f2f2;}
 		
-		#atividades {overflow:auto; background:;margin-top:6%;text-align:center;}
-		#parcerias {overflow:auto;background:#f2f2f2;margin-top:6%;text-align:center;padding:4%;padding-bottom:10%;}
+		.informacao {position: absolute; top: 0%; right: 4%; width: 45%; text-align: left; font-size: 20px;}
+		.informacao a {font-size: 1.2vw; border-radius: 8px; border: 2px solid #f2f2f2; font-family: "Open Sans", sans-serif; padding: 14px; text-decoration: none; color: #f2f2f2; font-weight: bold; transition: 1s;}
+		.informacao a:hover {background-color:#f2f2f2; color: #5050ea;}
 		
-		#parcerias img{display:inline-block;}
-		#atividades img{display:inline-block;}
+		#atividades {overflow: auto; margin-top: 6%; text-align: center; color:#f3f3f3;}		
+		#atividades img {display: inline-block;}
+		.caixativ {display:grid; grid-template-columns: 29% 29% 29%; justify-content: center;}
 		
-		.informacao {position: absolute; top: 8px; right: 16px; width:45%;text-align: left; font-size:20px;font-family:sans-serif;}
-		p {font-size:1.2vw; color:#3a3a3a;}
+		#parcerias {overflow: auto; background: #f2f2f2; margin-top: 6%; text-align: center; padding: 4%; padding-bottom: 10%;}
+		#parcerias img {display: inline-block;}
 		
-		.informacao a {font-size:1.2vw; border-radius:8px; border: 2px solid #f2f2f2; font-family: "Open Sans", sans-serif; background-color:#; padding: 14px; text-decoration:none; color:#f2f2f2; font-weight:bold; display:inline-block;}
+		.itens {width: 28%; float: none; padding: 2%; display: inline-block; margin: 0 auto;}
+		.itens:hover {opacity: 0.6;}
+		.itensb {float: none; padding: 10%; display: inline-block; align-self: start;}
+		
+		@media only screen and (max-width: 600px){
+			.informacao {position: absolute; top: 10%; right: 0px; left: 0px; margin: 0 auto; width: 70%; text-align: left; font-size: 20px;}
+		
+			.caixativ {display:grid; grid-template-columns: 50% 50%;  justify-content: center;}
+			.itensb {padding: 4%;}
+			
+			.itens {width: 80%; display: block;}
+		}
 	</style>
 
-	<body>
-		
+	<body>		
 		<div id="sobre">
-			<img src="Naes_banner.jpg" alt="Foto de toda a equipe do projeto" style="max-width:100%;">
-			<div class="informacao"><h1>Somos o projeto <b style="color:#ee87fa">Nanoessência</b></h1>
+			<img src="Naes_banner.jpg" alt="Foto de toda a equipe do projeto" style="width:100%; border-radius:16px;">
+			<div class="informacao"><h1>Somos o projeto Nanoessência</h1>
 				<p>Desenvolvemos estudos e pesquisas para promoção de ciência, tecnologia e inovação em nanotecnologia e cosméticos, estimulando meninas e mulheres em carreiras científicas.
 				</p>
 				<br>
@@ -47,30 +62,47 @@
 			</div>
 		</div>
 		
-	<div id="atividades">
-		<h2 class="cinza">Nossas atividades incluem</h2>
+		<div id="atividades">
+			<h2 class="cinza">Nossas atividades incluem</h2>
 		
-		<div style="display:grid; grid-template-columns: 29% 29% 29%; margin: 0 auto; justify-content: center;">
-			<div class="itensb azul"><img src="icones%20cinzas-01.png" width="80%" alt="Ilustração de uma lupa"><h3>Projetos de pesquisa</h3><p>Desenvolver inovação científica centrada na área de cosméticos, perfumes e produtos de higiene pessoal.</p></div>
-			<div class="itensb azul"><img src="icones%20cinzas-06.png" width="80%" alt="Ilustração de um megafone"><h3>Divulgação científica</h3><p>Disseminar as atividades desenvolvidas no projeto aos participantes e à sociedade.</p></div>
-			<div class="itensb azul"><img src="icones%20cinzas-04.png" width="80%" alt="Ilustração de um documento em uma prancheta"><h3>Acompanhamento das egressas</h3><p>Verificar como a participação no projeto contribuiu ou influenciou a trajetória de suas participantes.</p></div>
+			<div class="caixativ">
+				<div class="itensb azul"><img src="icones%20cinzas-01.svg" width="80%" alt="Ilustração de uma lupa">
+					<h3>Projetos de pesquisa</h3>
+					<p>Desenvolver inovação científica centrada na área de cosméticos, perfumes e produtos de higiene pessoal.</p>
+				</div>
+				<div class="itensb azul"><img src="icones%20cinzas-06.svg" width="80%" alt="Ilustração de um megafone">
+					<h3>Divulgação científica</h3>
+					<p>Disseminar as atividades desenvolvidas no projeto aos participantes e à sociedade.</p>
+				</div>
+				<div class="itensb azul"><img src="icones%20cinzas-04.svg" width="80%" alt="Ilustração de um documento em uma prancheta">
+					<h3>Acompanhamento das egressas</h3>
+					<p>Verificar como a participação no projeto contribuiu ou influenciou a trajetória de suas participantes.</p>
+				</div>
 			
-			<div class="itensb azul"><img src="icones%20cinzas-05.png" width="80%" alt="Ilustração de punhos levantados"><h3>Agendas de gênero e de relações étnicos/raciais</h3><p>Oferecer palestras e outras atividades visando mitigar as desigualdades nas carreiras científicas, bem como estimular a política de equidade nas instituições do sistema nacional de CT&I.</p></div>
-			<div class="itensb azul"><img src="icones%20cinzas-03.png" width="80%" alt="Ilustração de uma lâmpada"><h3>Agendas de empreendedorismo</h3><p>Ofertar atividades práticas, explorando diferentes setores, para permitir que as estudantes explorem todo o ciclo de desenvolvimento de produto.</p></div>
-			<div class="itensb azul"><img src="icones%20cinzas-02.png" width="80%" alt="Ilustração de um capelo"><h3>Formação de professores</h3><p>Realizar diferentes atividades focadas em metodologias de ensino, recursos educacionais digitais e estratégias para integração de assuntos do cotidiano no ensino de ciências.</p></div>
-			
+				<div class="itensb azul"><img src="icones%20cinzas-05.svg" width="80%" alt="Ilustração de punhos levantados">
+					<h3>Agendas de gênero e de relações étnicos/raciais</h3>
+					<p>Oferecer palestras e outras atividades visando mitigar as desigualdades nas carreiras científicas, bem como estimular a política de equidade nas instituições do sistema nacional de CT&I.</p>
+				</div>
+				<div class="itensb azul"><img src="icones%20cinzas-03.svg" width="80%" alt="Ilustração de uma lâmpada">
+					<h3>Agendas de empreendedorismo</h3>
+					<p>Ofertar atividades práticas, explorando diferentes setores, para permitir que as estudantes explorem todo o ciclo de desenvolvimento de produto.</p>
+				</div>
+				<div class="itensb azul"><img src="icones%20cinzas-02.svg" width="80%" alt="Ilustração de um capelo">
+					<h3>Formação de professores</h3>
+					<p>Realizar diferentes atividades focadas em metodologias de ensino, recursos educacionais digitais e estratégias para integração de assuntos do cotidiano no ensino de ciências.</p>
+				</div>			
 			</div>
-	</div>
+		</div>
 	
-	<div id="parcerias">		<br>
+		<div id="parcerias">		<br>
 			<h2 class="cinza">Um trabalho em equipe entre</h2>
-			<a href="/equipe"><div class="itens"><img src="banner_esc.png" width="100%" alt="Banner com o título 'Escolas' e uma foto de um grupo de alunas ao redor de uma mesa"></div></a>
-			<a href="/equipe"><div class="itens"><img src="banner_empr.png" width="100%" alt="Banner com o título 'Empresa' e uma foto da representante da empresa NanoScoping palestrando"></div></a>
-			<a href="/equipe"><div class="itens"><img src="banner_uni.png" width="100%" alt="Banner com o título 'Universidades' e foto de uma cientista explicando algo para as alunas a sua volta"></div></a>
 			
-	</div>
+			<a href="/equipe" class="itens" title="Conheça as escolas participantes"><img src="banner_esc.png" width="100%" alt="Banner com o título 'Escolas' e uma foto de um grupo de alunas ao redor de uma mesa"></a>
+			<a href="/equipe" class="itens" title="Conheça a empresa participante (link para o site da empresa NanoScoping)"><img src="banner_empr.png" width="100%" alt="Banner com o título 'Empresa' e uma foto da representante da empresa NanoScoping palestrando"></a>
+			<a href="/equipe" class="itens" title="Conheça as universidades participantes"><img src="banner_uni.png" width="100%" alt="Banner com o título 'Universidades' e foto de uma cientista explicando algo para as alunas a sua volta"></a>
+		</div>
 	
-	<img src="banner_convite.jpg" style="width:100%;" alt="Banner com os dizeres 'Você, estudante ou professora, também gostaria de participar? Envie-nos um e-mail: nanoessencia@gmail.com'. Em volta do texto, há vários quadrinhos decorativos com modelos atômicos e mais à direita, uma foto de duas alunas folheando um livreto de química. Todos os itens formam uma espécie de mosaico">
-	
+		<img src="banner_convite.jpg" style="width:100%; border-radius:16px; margin-top:-2%;" alt="Banner com os dizeres 'Você, estudante ou professora, também gostaria de participar? Envie-nos um e-mail: nanoessencia@gmail.com'. Em volta do texto, há vários quadrinhos decorativos com modelos atômicos e mais à direita, uma foto de duas alunas folheando um livreto de química. Todos os itens formam uma espécie de mosaico">     	
 	</body>
+	
 </html>
